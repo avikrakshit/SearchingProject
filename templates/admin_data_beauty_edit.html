@@ -1,0 +1,4110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit,Add,Upload Data</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:publisher" content="https://www.facebook.com/mdbootstrap">
+  <link rel="stylesheet" href="styles.13676bde651e61443fbf.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+  <script async="" src="https://snap.licdn.com/li.lms-analytics/insight.beta.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <style type="text/css">
+
+  	body {
+  font-family: "Lato", sans-serif;
+}
+
+.Input, .Input:hover {
+	outline: none
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-radius: 0px 0px 0px 0px;
+ }
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #595959;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+   /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
+.lispace {
+	 margin-bottom: 20px;
+
+}
+
+.Input-style {
+  background-image: ;
+  background-color: #e0ebeb;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #999999;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+
+.uploadlabel {
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+
+table{
+	text-align: center;
+  font-size: 10px;
+}
+
+
+
+
+  
+</style>
+</head>
+
+
+
+<body>
+
+<!-- Sidebar navigation -->
+
+<div class="sidenav" style="padding-top: 80px; font-size: 22px; background-color: #045de9;
+background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);">
+	<h3 style="text-align: center;"> Services </h3>
+	<hr style="border-top: 2px solid #737373;">
+	<div style="padding-left: 10px;">
+	<ul class="list-group">
+
+  	
+  		<li class="lispace"><img src="/static/grooming.png" style="width: 20px; height: 25px"><a href="#beauty">Beauty</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/food4.png" style="width: 20px; height: 25px"><a href="#food">Food</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/grocery-cart.png" style="width: 20px; height: 25px"><a href="#grocery">Grocery</a></li>
+  	
+  	
+  		<li class="lispace"><img src="/static/hotel4.png" style="width: 20px; height: 25px"><a href="#hotel">Hotel</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/cardiogram.png" style="width: 20px; height: 25px"><a href="#medical">Medical</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/place.png" style="width: 20px; height: 25px"><a href="#place">Places</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/shopping-bag.png" style="width: 20px; height: 25px"><a href="#shopping">Shopping</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/tools.png" style="width: 20px; height: 25px"><a href="#services">Services</a></li>
+
+
+  		<li class=""><img src="/static/book.png" style="width: 20px; height: 25px"><a href="#education">Education</a></li>
+  	
+
+  		<li class="lispace"><img src="/static/law2.png" style="width: 20px; height: 25px"><a href="#law">Law</a></li>
+  	
+
+  		
+    </ul>
+		
+	</div>
+  
+</div>
+
+<!--/. Sidebar navigation -->
+
+
+
+
+<div class="main">
+
+
+<!-- header starts here -->
+
+
+  <div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #a4508b;
+        background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); height: 225px; width: auto;" >
+        <div class="container space-2 space-0--lg mt-lg-8">
+          <div class="row justify-content-lg-between ">
+            <div class="d-grid  d-md-flex justify-content-md-end" style="float: right; margin-left: 970px">
+                <a href="/admin_data_main_menu?pincode={{pincode}}"><button class="btn btn-outline-warning me-md-2" type="button">HOME</button></a> &nbsp
+                <a href="/admin_data_logout"><button class="btn btn-outline-warning" type="button">Log Out</button></a>
+            </div>
+            <div style="text-align: center; color: #80dfff; margin-left: 100px">
+              <!-- Title -->
+              <h1 class="display-4 font-size-48--md-down mb-0"><b>Admin Panel for Handling Data</b></h1>
+              <h2 style = "color:#e6e600">Edit Details of the DATA</h2>
+              <!-- End Title -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+ <!-- header ends here-->
+
+
+<!-- <div class="jumbotron" style="text-align: center; background-color: #045de9;
+background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+">
+		<div style="margin-bottom : 20px; text-align: right;">
+			<a href="/admin_data_logout"><button class="float-right">Logout</button></a>
+		</div>	
+ 		
+ 		<div style="text-align: center;">
+ 			<h1></h1>
+			<br>
+			<h2>Edit Details of the DATA</h2>
+		</div>
+
+</div>
+ -->
+
+
+<form action="/admin_data2", method="POST">
+
+
+<div class="pincode-div" style=" height: 150px;">
+<center>
+	<h1 style="padding: 35px 70px 50px;">Welcome to the {{pincode}}</h1> <h3>Place : {{locality}}</h3>
+</center>
+</div>
+
+
+
+  
+
+
+<br>
+<br>
+<br>
+<br>
+
+ 
+
+
+ 						<!-- Beauty Section Stars -->
+
+<div id="beauty">
+<center>
+	<h1>Beauty</h1>
+	<h5>Category = 1</h5>
+</center>
+
+<div>
+
+	<input type="text"  class="float-left Input" id="myInput1" onkeyup="myFunction1()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#beautyadd">Add Data</button>
+</div>
+
+  <br>
+  <br>
+  <table id="myTable1" class="table  table-dark table-responsive" style="overflow-x:auto;">
+    <thead style="color: #0000ff">
+      <tr>
+        
+      <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>	
+      <th scope="col">locality</th>	
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">Picture</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody style="color:white">
+
+      {% for beauty in beauty %}
+
+      <tr>
+       
+        
+      <td>{{beauty.st_id}}</td>
+      <td>{{beauty.typ}}</td>
+      <td>{{beauty.st_name}}</td>
+      <td>{{beauty.description}}</td>
+      <td>{{beauty.street_name}}</td>
+      <td>{{beauty.pincode}}</td>
+      <td>{{beauty.place}}</td>
+      <td>{{beauty.locality}}</td>
+      <td>{{beauty.dist}}</td>
+      <td>{{beauty.state}}</td>
+      <td>{{beauty.phone}}</td>
+      <td>{{beauty.opening}}</td>
+      <td>{{beauty.closing}}</td>
+      <td>{{beauty.category}}</td>
+      <td>{{beauty.date_time}}</td>
+
+      <td>
+      	<form  action="/admin_image_upload/{{beauty.st_id}}" method="POST">
+      		<button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#beautyaddimage-{{beauty.st_id}}">
+   				Upload
+  			</button>
+  		</form>
+  	  </td>
+
+       <!-- Modal for upload Image Starting-->
+
+	<!-- The Modal -->
+  <div class="modal" id="beautyaddimage-{{beauty.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        	<form method="POST" action="/admin_image_upload/{{beauty.st_id}}" enctype="multipart/form-data">
+
+        		<input type="file" name="file"><br>
+        		<br>
+      			<input type="submit" value="Upload">
+          	
+          	</form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+      
+      <td>
+      	<form  action="/admin_data_edit/{{beauty.st_id}}" method="POST">
+      		<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#editbeauty-{{beauty.st_id}}">EDIT</button>
+      	</form>
+      </td>
+
+
+
+                <!-- The Modal for Edit Data in Beauty Section-->
+
+  <div class="modal fade" id="editbeauty-{{beauty.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Beauty Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_data_edit/{{beauty.st_id}}" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{beauty.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{beauty.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{beauty.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{beauty.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{beauty.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{beauty.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{beauty.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{beauty.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{beauty.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{beauty.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{beauty.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{beauty.closing}}">
+            </div>
+
+            
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="1">
+            </div>
+
+            
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ beauty.st_id }}" id="beauty.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Beauty Section-->
+  
+
+  <div class="modal fade" id="beautyadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Beauty Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_add" method="POST" enctype="multipart/form-data">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div> 
+              
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="1 ">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  											<!-- Beauty Section Ends -->
+
+
+ 
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+ 											<!-- Food Section Stars -->
+
+<div id="food">
+<center>
+	<h1>Food</h1>
+	<h5>Category = 2</h5>
+</center>
+<div>
+	<input type="text" class="float-left" id="myInput2" onkeyup="myFunction2()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#foodadd">Add Data</button>
+</div>
+							
+
+  <br>
+  <br>
+  <table id="myTable2" class="table table-dark table-responsive" style="overflow-x:auto;" >
+    <thead style="color: #00ff00">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">Picture</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+          
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for food in food %}
+
+      <tr>
+          
+      <td>{{food.st_id}}</td>
+      <td>{{food.typ}}</td>
+      <td>{{food.st_name}}</td>
+      <td>{{food.description}}</td>
+      <td>{{food.street_name}}</td>
+      <td>{{food.pincode}}</td>
+      <td>{{food.place}}</td>
+      <td>{{food.locality}}</td>
+      <td>{{food.dist}}</td>
+      <td>{{food.state}}</td>
+      <td>{{food.phone}}</td>
+      <td>{{food.opening}}</td>
+      <td>{{food.closing}}</td>
+      <td>{{food.category}}</td>
+      <td>{{food.date_time}}</td>
+      <td>
+        <form  action="/admin_image_upload/{{food.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#foodaddimage-{{food.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="foodaddimage-{{food.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{food.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+
+
+
+      <td>
+      	<form  action="/admin_data_edit/{{food.st_id}}" method="POST">
+      		<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#editfood-{{food.st_id}}">EDIT</button>
+      	</form>
+      </td>
+
+
+
+                <!-- The Modal for Edit Data in Food Section-->
+
+  <div class="modal fade" id="editfood-{{food.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Food Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_edit/{{food.st_id}}" method="POST">
+
+            
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{food.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{food.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{food.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{food.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{food.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{food.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="place" value="{{food.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{food.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{food.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{food.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{food.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{food.closing}}">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ food.st_id }}" id="food.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add User in Food Section-->
+  
+
+  <div class="modal fade" id="foodadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Beauty Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+       <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="2">
+              </div>
+
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Food Section Ends -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+ 											    <!-- Grocery Section Stars -->
+
+<div id="grocery">
+<center>
+	<h1>Grocery</h1>
+	<h5>Category = 3</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput3" onkeyup="myFunction3()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#groceryadd">Add Data</button>
+</div>
+							
+
+  <br>
+  <br>
+  <table id="myTable3" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #ff1ac6">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">PICTURE</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for grocery in grocery %}
+
+      <tr>
+          
+      <td>{{grocery.st_id}}</td>
+      <td>{{grocery.typ}}</td>
+      <td>{{grocery.st_name}}</td>
+      <td>{{grocery.description}}</td>
+      <td>{{grocery.street_name}}</td>
+      <td>{{grocery.pincode}}</td>
+      <td>{{grocery.place}}</td>
+      <td>{{grocery.locality}}</td>
+      <td>{{grocery.dist}}</td>
+      <td>{{grocery.state}}</td>
+      <td>{{grocery.phone}}</td>
+      <td>{{grocery.opening}}</td>
+      <td>{{grocery.closing}}</td>
+      <td>{{grocery.category}}</td>
+      <td>{{grocery.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{grocery.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#groceryaddimage-{{grocery.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="groceryaddimage-{{grocery.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{grocery.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+        
+
+
+
+                <!-- The Modal for Edit Data in Grocery Section-->
+
+  <div class="modal fade" id="groceryedit-{{grocery.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Grocery Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_edit/{{grocery.st_id}}" method="POST">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{grocery.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{grocery.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{grocery.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{grocery.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{grocery.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{grocery.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{grocery.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{grocery.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{grocery.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{grocery.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{grocery.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{grocery.closing}}">
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="3">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ grocery.st_id }}" id="grocery.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add User in Grocery Section-->
+  
+
+  <div class="modal fade" id="groceryadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Grocery Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="3">
+              </div>
+
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Grocery Section Ends -->
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+ 											    <!-- Hotel Section Stars -->
+
+<div id="hotel">
+<center>
+	<h1>Hotel</h1>
+	<h5>Category = 4</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput4" onkeyup="myFunction4()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#hoteladd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable4" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #ffff00">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">PICTURE</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+      
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for hotel in hotel %}
+
+      <tr>
+          
+      <td>{{hotel.st_id}}</td>
+      <td>{{hotel.typ}}</td>
+      <td>{{hotel.st_name}}</td>
+      <td>{{hotel.description}}</td>
+      <td>{{hotel.street_name}}</td>
+      <td>{{hotel.pincode}}</td>
+      <td>{{hotel.place}}</td>
+      <td>{{hotel.locality}}</td>
+      <td>{{hotel.dist}}</td>
+      <td>{{hotel.state}}</td>
+      <td>{{hotel.phone}}</td>
+      <td>{{hotel.opening}}</td>
+      <td>{{hotel.closing}}</td>
+      <td>{{hotel.category}}</td>
+      <td>{{hotel.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{hotel.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#hoteladdimage-{{hotel.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="hoteladdimage-{{hotel.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{hotel.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+      
+
+        <td>
+        	<form  action="/admin_data_edit/{{hotel.st_id}}" method="POST">
+        		<button type="button"  class="btn btn-success btn-xs" data-toggle="modal" data-target="#hoteledit-{{hotel.st_id}}">EDIT</button>
+        	</form>
+        </td>
+
+
+
+
+
+                <!-- The Modal for Edit Data in Hotel Section-->
+
+  <div class="modal fade" id="hoteledit-{{hotel.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center>
+          	<h4 class="modal-title">Update Data in Hotel Section</h4>
+          </center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_edit/{{hotel.st_id}}" method="POST">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{hotel.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{hotel.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{hotel.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{hotel.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{hotel.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{hotel.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{hotel.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{hotel.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{hotel.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{hotel.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{hotel.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{hotel.closing}}">
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="4">
+            </div>
+
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ hotel.st_id }}" id="hotel.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Hotel Section-->
+  
+
+  <div class="modal fade" id="hoteladd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Hotel Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+       <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+             <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="4">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Hotel Section Ends -->
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+											    <!-- Medical Section Stars -->
+
+<div id="medical">
+<center>
+	<h1>Medical</h1>
+	<h5>Category = 5</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput5" onkeyup="myFunction5()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#medicaladd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable5" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #ff0000">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">PICTURE</th>      
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for medical in medical %}
+
+      <tr>
+          
+      <td>{{medical.st_id}}</td>
+      <td>{{medical.typ}}</td>
+      <td>{{medical.st_name}}</td>
+      <td>{{medical.description}}</td>
+      <td>{{medical.street_name}}</td>
+      <td>{{medical.pincode}}</td>
+      <td>{{medical.place}}</td>
+      <td>{{medical.locality}}</td>
+      <td>{{medical.dist}}</td>
+      <td>{{medical.state}}</td>
+      <td>{{medical.phone}}</td>
+      <td>{{medical.opening}}</td>
+      <td>{{medical.closing}}</td>
+      <td>{{medical.category}}</td>
+      <td>{{medical.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{medical.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#medicaladdimage-{{medical.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="medicaladdimage-{{medical.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{medical.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+        <td>
+        	<form  action="/admin_data_edit/{{medical.st_id}}" method="POST">
+        		<button type="button"  class="btn btn-success btn-xs" data-toggle="modal" data-target="#medicaledit-{{medical.st_id}}">EDIT</button>
+        	</form>
+        </td>
+
+
+
+
+
+       
+
+
+
+                <!-- The Modal for Edit Data in Medical Section-->
+
+  <div class="modal fade" id="medicaledit-{{medical.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Medical Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_edit/{{medical.st_id}}" method="POST">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{medical.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{medical.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{medical.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{medical.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{medical.st_id}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{medical.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{medical.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{medical.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{medical.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{medical.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{medical.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{medical.closing}}">
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="5">
+            </div>
+
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ medical.st_id }}" id="medical.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Medical Section-->
+  
+
+  <div class="modal fade" id="medicaladd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Medical Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+    <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="5">
+              </div>
+
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Medical Section Ends -->
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+											    <!-- Place Section Stars -->
+
+<div id="place">
+<center>
+	<h1>Places</h1>
+	<h5>Category = 6</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput6" onkeyup="myFunction6()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#placeadd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable6" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #00ccff ">
+      <tr>
+        
+        <th scope="col">Place ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Place Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">PICTURE</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for places in places %}
+
+      <tr>
+          
+      <td>{{places.st_id}}</td>
+      <td>{{places.typ}}</td>
+      <td>{{places.st_name}}</td>
+      <td>{{places.description}}</td>
+      <td>{{places.street_name}}</td>
+      <td>{{places.pincode}}</td>
+      <td>{{places.place}}</td>
+      <td>{{places.locality}}</td>
+      <td>{{places.dist}}</td>
+      <td>{{places.state}}</td>
+      <td>{{places.phone}}</td>
+      <td>{{places.opening}}</td>
+      <td>{{places.closing}}</td>
+      <td>{{places.category}}</td>
+      <td>{{places.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{places.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#placesaddimage-{{places.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="placesaddimage-{{places.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{places.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<!-- Modal for upload Image Ending-->
+
+
+<td>
+  <form  action="/admin_data_edit/{{places.st_id}}" method="POST">
+    <button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#placeedit-{{places.st_id}}">EDIT</button>
+  </form>
+</td>
+
+
+
+
+                <!-- The Modal for Edit Data in Place Section-->
+
+  <div class="modal fade" id="placeedit-{{places.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Place Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form action="/admin_data_edit/{{places.st_id}}" method="POST">
+
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{places.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{places.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{places.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{places.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{places.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{places.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{places.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{places.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{places.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{places.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{places.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{places.closing}}">
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="6">
+            </div>
+
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ places.st_id }}" id="places.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Place Section-->
+  
+
+  <div class="modal fade" id="placeadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Place Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="6">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Places Section Ends -->
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+									     <!-- Shopping Section Stars -->
+
+<div id="shopping">
+<center>
+	<h1>Shopping</h1>
+	<h5>Category = 7</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput7" onkeyup="myFunction7()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#shoppingadd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable7" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #ff9900">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">PICTURE</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for shopping in shopping %}
+
+      <tr>
+          
+       <td>{{shopping.st_id}}</td>
+      <td>{{shopping.typ}}</td>
+      <td>{{shopping.st_name}}</td>
+      <td>{{shopping.description}}</td>
+      <td>{{shopping.street_name}}</td>
+      <td>{{shopping.pincode}}</td>
+      <td>{{shopping.place}}</td>
+      <td>{{shopping.locality}}</td>
+      <td>{{shopping.dist}}</td>
+      <td>{{shopping.state}}</td>
+      <td>{{shopping.phone}}</td>
+      <td>{{shopping.opening}}</td>
+      <td>{{shopping.closing}}</td>
+      <td>{{shopping.category}}</td>
+      <td>{{shopping.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{shopping.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#shoppingaddimage-{{shopping.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="shoppingaddimage-{{shopping.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{shopping.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+        <td>
+        	<form  action="/admin_data_edit/{{shopping.st_id}}" method="POST">
+        		<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#shoppingedit-{{shopping.st_id}}">EDIT</button>
+        	</form>
+        </td>
+
+
+
+
+
+
+                <!-- The Modal for Edit Data in Shopping Section-->
+
+  <div class="modal fade" id="shoppingedit-{{shopping.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Shopping Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/admin_data_edit/{{shopping.st_id}}" method="POST">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{shopping.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{shopping.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{shopping.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{shopping.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{shopping.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{shopping.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{shopping.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{shopping.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{shopping.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{shopping.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{shopping.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{shopping.closing}}">
+            </div>
+
+            
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="7">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ shopping.st_id }}" id="shopping.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Shopping Section-->
+  
+
+  <div class="modal fade" id="shoppingadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Shopping Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+       <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="7">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Shopping Section Ends -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+									    		<!-- Services Section Stars -->
+
+<div id="services">
+<center>
+	<h1>Services</h1>
+	<h5>Category = 8</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput8" onkeyup="myFunction8()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#servicesadd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable8" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #b31aff">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">Picture</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for services in services %}
+
+      <tr>
+          
+      <td>{{services.st_id}}</td>
+      <td>{{services.typ}}</td>
+      <td>{{services.st_name}}</td>
+      <td>{{services.description}}</td>
+      <td>{{services.street_name}}</td>
+      <td>{{services.pincode}}</td>
+      <td>{{services.place}}</td>
+      <td>{{services.locality}}</td>
+      <td>{{services.dist}}</td>
+      <td>{{services.state}}</td>
+      <td>{{services.phone}}</td>
+      <td>{{services.opening}}</td>
+      <td>{{services.closing}}</td>
+      <td>{{services.category}}</td>
+      <td>{{services.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{services.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#servicesaddimage-{{services.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="servicesaddimage-{{services.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{services.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+      <td><form  action="/admin_data_edit/{{services.st_id}}" method="POST">
+        	<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#servicesedit-{{services.st_id}}">EDIT</button>
+        </form>
+      </td>
+
+    	
+
+
+                <!-- The Modal for Edit Data in Service Section-->
+
+
+  <div class="modal fade" id="servicesedit-{{services.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Service Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_data_edit/{{services.st_id}}" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{services.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{services.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{services.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{services.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{services.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{services.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{services.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{services.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{services.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{services.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{services.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{services.closing}}">
+            </div>
+
+            
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="8">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ services.st_id }}" id="services.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Service Section-->
+  
+
+  <div class="modal fade" id="servicesadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Service Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+
+             <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="8">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Services Section Ends -->												
+
+
+
+
+
+
+									    		<!-- Education Section Stars -->
+
+<div id="education">
+<center>
+	<h1>EDUCATION</h1>
+	<h5>Category = 9</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput9" onkeyup="myFunction9()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#educationadd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable9" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #b31aff">
+      <tr>
+        
+        <th scope="col">ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">Picture</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for education in education %}
+
+      <tr>
+          
+      <td>{{education.st_id}}</td>
+      <td>{{education.typ}}</td>
+      <td>{{education.st_name}}</td>
+      <td>{{education.description}}</td>
+      <td>{{education.street_name}}</td>
+      <td>{{education.pincode}}</td>
+      <td>{{education.place}}</td>
+      <td>{{education.locality}}</td>
+      <td>{{education.dist}}</td>
+      <td>{{education.state}}</td>
+      <td>{{education.phone}}</td>
+      <td>{{education.opening}}</td>
+      <td>{{education.closing}}</td>
+      <td>{{education.category}}</td>
+      <td>{{education.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{education.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#educationaddimage-{{education.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="educationaddimage-{{education.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{education.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+        <td>
+        	<form  action="/admin_data_edit/{{education.st_id}}" method="POST">
+        		<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#educationedit-{{education.st_id}}">EDIT</button>
+        	</form>
+        </td>
+
+
+
+
+                <!-- The Modal for Edit Data in Education Section-->
+
+  <div class="modal fade" id="educationedit-{{education.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Education Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_data_edit/{{education.st_id}}" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{education.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Store Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{education.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{education.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{education.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{education.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{education.place}}">
+            </div>
+
+             <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{education.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{education.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{education.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{education.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{education.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{education.closing}}">
+            </div>
+
+            
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="9">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ education.st_id }}" id="education.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Education Section-->
+  
+
+  <div class="modal fade" id="educationadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Service Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="9">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Education Section Ends -->												
+
+
+
+
+
+									    		<!-- Law Section Stars -->
+
+<div id="law">
+<center>
+	<h1>LAW</h1>
+	<h5>Category = 10</h5>
+</center>
+
+
+<div>
+	<input type="text" class="float-left" id="myInput10" onkeyup="myFunction10()" placeholder="Search for Store Name.." title="Type in a name">
+							
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#lawadd">Add Data</button>
+</div>
+
+
+
+  <br>
+  <br>
+  <table id="myTable10" class="table table-hover table-dark  table-responsive" style="overflow-x:auto;">
+    <thead style="color: #b31aff">
+      <tr>
+        
+        <th scope="col">ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">Locality</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Category</th>
+      <th scope="col">Created</th>
+      <th scope="col">Picture</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for law in law %}
+
+      <tr>
+          
+         <td>{{law.st_id}}</td>
+      <td>{{law.typ}}</td>
+      <td>{{law.st_name}}</td>
+      <td>{{law.description}}</td>
+      <td>{{law.street_name}}</td>
+      <td>{{law.pincode}}</td>
+      <td>{{law.place}}</td>
+      <td>{{law.locality}}</td>
+      <td>{{law.dist}}</td>
+      <td>{{law.state}}</td>
+      <td>{{law.phone}}</td>
+      <td>{{law.opening}}</td>
+      <td>{{law.closing}}</td>
+      <td>{{law.category}}</td>
+      <td>{{law.date_time}}</td>
+       <td>
+        <form  action="/admin_image_upload/{{law.st_id}}" method="POST">
+          <button type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#lawaddimage-{{law.st_id}}">
+          Upload
+        </button>
+      </form>
+      </td>
+
+       <!-- Modal for upload Image Starting-->
+
+  <!-- The Modal -->
+  <div class="modal" id="beautyaddimage-{{law.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_image_upload/{{law.st_id}}" enctype="multipart/form-data">
+
+            <input type="file" name="file"><br>
+            <br>
+            <input type="submit" value="Upload">
+            
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Modal for upload Image Ending-->
+
+      <td><form  action="/admin_data_edit/{{law.st_id}}" method="POST">
+      	<button type="button"  class="btn btn-success btn-xs float-right" data-toggle="modal" data-target="#lawedit-{{law.st_id}}">EDIT</button>
+      		</form>
+      </td>
+
+
+
+      
+
+
+
+                <!-- The Modal for Edit Data in Law Section-->
+
+  <div class="modal fade" id="lawedit-{{law.st_id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update Data in Law Section</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/admin_data_edit/{{law.st_id}}" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" value="{{law.typ}}">
+            </div>
+
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" name="st_name" value="{{law.st_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" value="{{law.description}}">
+            </div>
+
+             <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" value="{{law.street_name}}">
+            </div>
+
+             <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" value="{{law.pincode}}">
+            </div>
+
+             <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" value="{{law.place}}">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" value="{{law.locality}}">
+            </div>
+
+            <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" value="{{law.dist}}">
+            </div>
+
+            <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" value="{{law.state}}">
+            </div>
+
+            <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" value="{{law.phone}}">
+            </div>
+
+            <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" value="{{law.opening}}">
+            </div>
+
+            <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" value="{{law.closing}}">
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" value="10">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/admin_data_delete/{{ law.st_id }}" id="law.st_id" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="DELETE" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add Data in Law Section-->
+  
+
+  <div class="modal fade" id="lawadd">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Data in Law Section</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="admin_data_add" method="POST">
+            
+
+            <div class="form-group">
+              <label>Type:</label>
+              <input type="text" class="form-control" name="typ" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" name="st_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" name="description" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Street Name:</label>
+              <input type="text" class="form-control" name="street_name" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Pincode:</label>
+              <input type="text" class="form-control" name="pincode" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Place:</label>
+              <input type="text" class="form-control" name="place" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Locality:</label>
+              <input type="text" class="form-control" name="locality" required="1">
+            </div>
+
+
+              <div class="form-group">
+              <label>District:</label>
+              <input type="text" class="form-control" name="dist" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>State:</label>
+              <input type="text" class="form-control" name="state" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Opening:</label>
+              <input type="text" class="form-control" name="opening" required="1">
+              </div>
+
+              <div class="form-group">
+              <label>Closing:</label>
+              <input type="text" class="form-control" name="closing" required="1">
+              </div>
+
+              
+              <div class="form-group">
+              <label>Category:</label>
+              <input type="text" class="form-control" name="category" required="1" value="10">
+              </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Data</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  												<!-- Law Section Ends -->												
+
+
+
+
+  <br>
+    <br>
+
+
+    <!-- footer starts here -->
+
+    <footer class="page-footer font-small  pt-4" style="background-color: #00bfb2;
+background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto"  style="color: #333333">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">why searchdisk</h5>
+        <p>Here you can get any type of information at one click with the easiest way, just select your location and catch whatever information you want .</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" >
+          <li>
+            <a href="#">Link 1</a>
+          </li>
+          <li>
+            <a href="#">Link 2</a>
+          </li>
+          <li>
+            <a href="#">Link 3</a>
+          </li>
+          <li>
+            <a href="#">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  
+  <!-- Social buttons -->
+
+  <ul class="list-unstyled list-inline text-center">
+    <h4 style="color: #333333">Connect with Us</h4>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-facebook"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-twitter"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-google"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-linkedin"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-youtube"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-instagram"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-pinterest"></a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: #333333"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+    <!-- footer ends here -->
+
+
+
+
+</div>
+</form>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+	$(document).ready(() => {
+	// SideNav Button Initialization
+  $(".button-collapse").sideNav2();
+  // SideNav Scrollbar Initialization
+  var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+  var ps = new PerfectScrollbar(sideNavScrollbar);
+});
+
+
+
+ // search function for beauty section
+function myFunction1()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+// search function for food section
+function myFunction2()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+// search function for grocery section
+function myFunction3()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput3");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable3");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+// search function for hotel section
+
+function myFunction4()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput4");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable4");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
+
+// search function for medical section
+
+function myFunction5()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput5");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable5");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+// search function for places section
+
+function myFunction6()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput6");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable6");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
+
+// search function for shopping section
+
+function myFunction7()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput7");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable7");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
+
+
+// search function for services section
+
+function myFunction8()
+ {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput8");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable8");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      console.log(txtValue, td.textContent, td.innerText)
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      	console.log("found")
+        tr[i].style.display = "";
+      }
+       else {
+      	console.log("not found")
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
+
+	
+</script>
+
+
+</body>
+</html>

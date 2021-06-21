@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <title>Admin LOGIN</title>
+  </head>
+  <body>
+    <header >
+  
+        
+  <div class="navbar  shadow-xl " style="height: 290px; background-color: #a4508b;
+background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+">
+    <div class="container d-flex justify-content-between  float-center-auto">
+      <h1 style="color: white; font-size: 60px; padding-left: 150px; font-family: Bradley Hand">Admin Panel for handling Users</h1>
+       </div>
+  </div>
+</header>
+
+<body>
+    <form class="form-signin p-3 text-center" action="/admin_gram" method="POST">
+
+      <div class=" container w-25">
+        <img class="mb-4" src="static/admin.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-1 font-weight-normal">Please Sign in</h1>
+        <label for="username" class="sr-only">Admin Name</label>
+
+        <input type="text" id="username" name="username" class="form-control" placeholder="Admin Name" required="" autofocus="">
+
+        <label for="paswrd" class="sr-only">Password</label>
+
+        <input type="password" id="paswrd" name="paswrd" class="form-control mt-3" placeholder="Password" required="">
+        
+        <div class="checkbox mb-1">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </div> 
+</form>
+
+
+</body>
+
+    
+  

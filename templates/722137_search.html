@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serach Details</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<br>
+		<br>
+  <center><h2>You Searched on 722137 Pincode</h2></center>
+  <br>
+  <br> 
+  <form method="POST", action="/result">  
+ 	<center> <h2>Details about Beauty</h2></center>    
+  <table class="table" width="100%">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Shop Name</th>
+        <th>Location</th>
+        <th>Decription</th>
+        <th>Phone No</th>
+        <th>Opening Time</th>
+        <th>Closing Time</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+    	
+    	{% for result1 in result1 %} 
+
+      <tr>
+        <td>{{result1[0]}}</td>
+        <td>{{result1[1]}}</td>
+        <td>{{result1[2]}}</td>
+        <td>{{result1[3]}}</td>
+        <td>{{result1[4]}}</td>
+        <td>{{result1[5]}}</td>
+        <td>{{result1[6]}}</td>
+       </tr>
+
+      {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<br>
+<center><h2>Details about Food</h2></center> 
+<table class="table" width="100%">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Shop Name</th>
+        <th>Location</th>
+        <th>Decription</th>
+        <th>Phone No</th>
+        <th>Opening Time</th>
+        <th>Closing Time</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <br>
+    <tbody>
+    	
+    	{% for result2 in result2 %} 
+
+    	<tr>
+        <td>{{result2[0]}}</td>
+        <td>{{result2[1]}}</td>
+        <td>{{result2[2]}}</td>
+        <td>{{result2[3]}}</td>
+        <td>{{result2[4]}}</td>
+        <td>{{result2[5]}}</td>
+        <td>{{result2[6]}}</td>
+       </tr>
+
+      {% endfor %}
+    </tbody>
+
+  </table>
+ </div>
+</form>
+
+</body>
+</html>

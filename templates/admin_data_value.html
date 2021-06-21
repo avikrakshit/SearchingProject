@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html style="margin: 0px; width: 100%">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="static/country_state_city_2.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<style>
+   .top_color {
+    background-color: white;
+    background-size: cover;
+    height: 120px;
+    width: 100%;
+ 
+}
+
+ .size {
+  background-size: cover;
+ }
+
+ .grid-container {
+  display: grid;
+  background-color: white;
+   }
+
+
+  .grid-item-1 {
+   background-color: black;
+    height: 60px;
+  } 
+
+  .font1 {
+    font-family: "Ink Free", Courier, monospace;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: white;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+text-shadow: 3px 2px 2px #66e0ff;
+  }
+  
+
+  .column {
+    float: left;
+    width: 40%;
+    padding: 15px;
+    padding-left: 50px;
+}
+
+.column-2 {
+    float: right;
+    width: 40%;
+    padding: 15px;
+    padding-left: 200px;
+}
+
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.grid-container-1 {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-gap: 70px;
+  padding: 100px;
+
+  
+}
+
+.grid-container-1 > div {
+  background-color: #D9D2DE;
+  color: black;
+  padding: 20px 0;
+  font-size: 30px;
+  width: 200px;
+  height: 180px;
+  box-shadow: 12px 10px 8px  -2px #504F50;
+  margin-left: 0px;
+  text-align: center;
+  font-family: "Lucida Console", Courier, monospace;
+
+}
+
+footer {
+  margin-top: 400px;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  height: 150px;
+  font-family: "Rockwell", Rockwell, monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ccf2ff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #008080; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #004d4d; 
+}
+
+::-webkit-scrollbar-corner {
+  border-width : 5px;
+}
+ 
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: black
+}
+
+a:active {
+  color:blue;
+}
+
+
+
+</style>
+</head>
+
+<body style="margin: 0px; background-color: white">
+    <table class="top_color main" style="background-color: white;">
+      <tr>
+      <td>
+        <div class="box-header">
+        <p style="text-align: right; font-size: 20px; padding-right: 20px; padding-top: 8px; color: white;"><a class="btn btn-lg btn-success" href="/login" style="text-decoration: none;color: white ">Logout</a> &nbsp &nbsp &nbsp <a class="btn btn-lg btn-info" href="/" style="text-decoration: none; color: white">Home</a></p>
+      </div>
+      </td>
+    </tr>
+    </table>
+
+  
+
+
+  <br>
+  <br>
+
+<form action="/admin_data_main_menu" >
+<div class="container" style="width:500px;">
+
+
+  <select name="state" id="state" class="form-control input-lg">
+    <option value="">Select State</option>
+    </select>
+    <br/>
+    <select name="district" id="district" class="form-control input-lg">
+    <option value="">Select District</option>
+    </select>
+    <br/>
+    <select name="pincode" id="pincode" class="form-control input-lg">
+    <option value="">Select Pincode</option>
+  </select>
+
+  <br>
+  <br>
+  <br>
+  <p><button style="margin-left: 200px" class="btn btn-primary btn-lg">Search</button></p>
+
+
+<script>
+$(document).ready(function(){
+
+ function load_json_data(id, parent_id)
+ {
+  
+  /*Load data into Country Dropdown*/
+  /*Using Map function*/
+    $("#state").empty().append(`<option disabled selected>Select State</option>`).append(`
+      ${geoArr.filter(g => g.parent_id==="0").map(state => { return `<option value="${state.id}">${state.name}</option>` })}
+    `)
+    $(document).on("change", "#state", () => {
+      let id = $("#state option:selected").val()    
+      $("#district").empty().append(`<option disabled selected>Select District</option>`).append(`
+        ${geoArr.filter(g => g.parent_id===id.toString()).map(district => { return `<option value="${district.id}">${district.name}</option>` })}
+      `)
+    })
+  $(document).on("change", "#district", () => {
+      let id = $("#district option:selected").val()   
+      $("#pincode").empty().append(`<option disabled selected>Select Pincode</option>`).append(`
+        ${geoArr.filter(g => g.parent_id===id.toString()).map(pincode => { return `<option value="${pincode.id}">${pincode.name}</option>` })}
+      `)
+    })
+ }
+
+ load_json_data('state');
+
+ /*$(document).on('change', '#country', function(){
+  var country_id = $(this).val();
+  if(country_id != '')
+  {
+   load_json_data('state', country_id);
+  }
+  else
+  {
+   $('#state').html('<option value="">Select state</option>');
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });
+ $(document).on('change', '#state', function(){
+  var state_id = $(this).val();
+  if(state_id != '')
+  {
+   load_json_data('city', state_id);
+  }
+  else
+  {
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });*/
+});
+</script>
+
+</form>
+</div>
+
+
+
+
+<footer style="margin-top: 240px">
+  <p style="padding-left: 20px; padding-right: 20px;">Author: Unknown Bosco  &nbsp &nbsp &nbsp
+  <b style=" color: #00e600">Searchy Dunia</b> 
+  </p>
+  <br>
+  <p style="padding-left: 20px;">Terms & Condition &nbsp &nbsp &nbsp Disclaimer &nbsp &nbsp &nbsp Privacy Policy &nbsp &nbsp &nbsp</p>
+
+  <p style=" padding-left: 600px">&#169; Copyright 2020 &nbsp &nbsp &nbsp All Right Reserved</p>
+
+</footer>
+
+</body>
+</html>
+
+

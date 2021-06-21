@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .sidenav {
+  height: auto;
+  width: 220px;
+  position: absolute;
+  z-index: 1;
+  top: 225;
+  left: 0;
+  background-color: #d9d9d9;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  padding-top: 80px;
+ }
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #527a7a;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #008080;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+   /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+h4 {
+  color: #ff751a;
+}
+  </style>
+
+</head>
+<body>
+
+
+
+        <!-- header starts here -->
+
+
+  <div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #a4508b;
+        background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); height: 225px; width: auto;" >
+        <div class="container space-2 space-0--lg mt-lg-8">
+          <div class="row justify-content-lg-between ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="float: right; margin-left: 970px">
+                <a href=""><button class="btn btn-outline-warning me-md-2" type="button">HOME</button></a> &nbsp &nbsp 
+                <a href="/admin_user_logout"><button class="btn btn-outline-warning" type="button">Log Out</button></a>
+            </div>
+            <div style="text-align: center;">
+              <!-- Title -->
+              <h1 class="display-4 font-size-48--md-down" style="color: #80dfff; text-align: center;"><b>Data Modification</b></h1>
+              <!-- End Title -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- header ends here-->
+
+
+<div class="container">
+
+
+    <!-- Sidebar navigation -->
+
+<div class="sidenav" >
+  <h3>Useful Link</h3>
+  <br>
+  <h4> USERS </h4>
+  <hr style="border-top: 2px solid #737373;">
+  <div style="">
+  <ul class="list-group">
+      <li class="lispace"><a href="#">1. List of Data</a></li>
+      <li class="lispace"><a href="#">2. Modification</a></li>
+  </ul>
+ 
+  <br>
+  <br>
+
+  <h4> DATA </h4>
+  <hr style="border-top: 2px solid #737373;">
+  <ul class="list-group">
+      <li class="lispace"><a href="#">1. Graph Representation</a></li>
+      <li class="lispace"><a href="#">2. List of Data</a></li>
+      <li class="lispace"><a href="#">3. Modification</a></li>
+  </ul>
+  </div>
+  
+  
+</div>
+
+<!--/. Sidebar navigation -->
+
+
+  
+ 
+  
+  <center><h2 class="display-6">Details about USERS</h2></center>
+  <br>
+  <br>
+  <br>
+
+  
+ <div class="main">
+   
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  
+  <div id="alert" class="alert alert-danger" role="alert">
+    &nbsp{{ messages }}    
+  </div>
+
+{% endif %}
+{% endwith %}
+ 
+  <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#myModal" style="margin-left:100px ">Add New User</button>
+  <br>
+  <br>
+  <table class="table table-striped" style="width: auto">
+    <thead>
+      <tr>
+        
+        <th>No.</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>D.O.B</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Created</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for gram_val in gram_val %}
+
+      <tr>
+          
+        <td>{{gram_val.nid}}</td>    
+        <td>{{gram_val.cname}}</td>
+        <td>{{gram_val.gender}}</td>
+        <td>{{gram_val.birthdate}}</td>
+        <td>{{gram_val.address}}</td>
+        <td>{{gram_val.email}}</td>
+        <td>{{gram_val.mobile}}</td>
+        <td>{{gram_val.date_time}}</td>
+
+        <td><form  action="/edit/{{gram_val.nid}}" method="POST"><button type="button"  class="btn btn-warning btn-xs float-right" data-toggle="modal" data-target="#editmodal-{{gram_val.nid}}">EDIT</button></form></td>
+
+
+
+                <!-- The Modal for Edit User-->
+
+  <div class="modal fade" id="editmodal-{{gram_val.nid}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Update User</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form method="POST" action="/edit/{{gram_val.nid}}">
+
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" name="cname" value="{{gram_val.cname}}">
+            </div>
+
+            
+             <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" name="email" value="{{ gram_val.email }}">
+            </div>
+
+             <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="mobile" value="{{ gram_val.mobile }}">
+            </div>
+
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <td><form action="/delete/{{ gram_val.nid }}" id="gram_val.nid" method = 'POST'>
+    <input type="hidden" name="method" value="DELETE">
+    <input type="submit" value="Delete" class="btn btn-danger"  onclick="return confirm('Do you want to Delete ?')">
+    </form>
+  </td>
+</tr>
+
+      
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+                              <!-- The Modal for Add User-->
+  
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add User</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/insert" method="POST">
+            
+
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" name="cname" required="1">
+            </div>
+
+
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" name="email" required="1">
+            </div>
+
+              <div class="form-group">
+              <label>Phone:</label>
+              <input type="text" class="form-control" name="phone" required="1">
+            </div>
+
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="Password" class="form-control" name="password" required="1">
+            </div>
+
+
+              <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add User</button>
+              </div>
+            
+          </form>
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+ 
+
+
+
+
+</div>
+
+
+</body>
+</html>

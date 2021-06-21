@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+
+  	<script src="static/country_state_city.json"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+    <style type="text/css">
+
+
+    	    .carousel-item{
+    height: 400px;
+} 
+    .carousel-item img{
+    height: 400px;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+.zoom {
+  transition: transform 1.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
+
+.cardstyle {
+  color : black;
+  background-color: white
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: #b3b3b3;
+}
+
+.fa-facebook {
+  color: #333333;
+ }
+
+.fa-twitter {
+  color: #333333;
+ 
+}
+
+.fa-google {
+  color: #333333;
+ }
+
+.fa-linkedin {
+  color: #333333;
+  
+}
+
+.fa-youtube {
+  color:  #333333;
+}
+
+.fa-instagram {
+  color: #333333 ;
+  
+}
+
+.fa-pinterest {
+  color: #333333;
+}
+
+
+.card-pos {
+	margin-left: 150px;
+}
+
+
+@media (min-width: 576px) {
+
+	.d-lg-flex {
+		width: auto;
+	}
+
+	.footer {
+		width: 100%;
+	}
+
+}
+    	
+</style>
+
+
+<title>Beauty Data Details</title>
+
+</head>
+
+
+
+<body>
+  <!-- navbar starts here -->
+
+    <nav class="navbar navbar-expand-lg navbar-light" 
+    style="background-color: white;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about_us">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Become a Contributer</a>
+      </li>
+    
+        
+    </ul>
+
+
+    <div style="padding-right:50px">
+      <a href=""><button type="button" class="btn btn-dark">Profile</button></a>&nbsp &nbsp &nbsp
+
+      <a href="/logout"><button type="button" class="btn btn-dark">LOG OUT</button></a>
+       
+      
+    </div>
+
+    
+  </div>
+</nav>
+
+<!-- navbar ends here -->
+
+
+
+
+	<!-- header starts here -->
+
+
+	<div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #000000;
+        background-image: linear-gradient(147deg, #000000 0%, #04619f 74%); height: 250px" >
+        <div class="container space-2 space-0--lg mt-lg-8">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class=" mb-7 mb-lg-0">
+              <!-- Title -->
+              <span class="d-block display-4 mb-2" style=" color: #66dbff">Find the nearest Saloon, Beauty Parlour, Cosmetic Shop in your area.</span>
+              <h1 class="display-4 font-size-48 md-down mb-0" style="color: #66dbff">{{st_name}} </h1>
+              <!-- End Title -->
+              <br>
+              <span class="d-block mb-2" style="color: #66dbff">Location : <strong>{{locality}}</strong></span>
+         </div>
+
+     </div>
+  </div>
+</div>
+
+
+    <!-- header ends here-->
+
+<br>
+<br>
+
+
+  <div class="main">
+  
+
+<div class="container" style="text-align: center;">
+  
+
+  
+
+
+
+  <br>
+ 
+<h3 style="text-align: center;">
+  
+</h3>
+<br>
+<br>
+
+
+
+          
+
+<hr style="border-top: 1px solid black">
+{% for beauty in beauty %}
+  <div class="card mb-3" style="max-width: 100%; border-width: 0px; position: relative">
+  <div class="row no-gutters">
+    <div class="col-md-4" align="ma" class="card-img object-contain h-48 w-full" >
+      
+      <img src="static/Uploaded/{{beauty.st_id}}" width="256px" height="256px" id="image"  class="card-img object-contain h-48 w-full " alt="No Image Available"> 
+      
+    </div>
+    <div class="col-md-8" style="line-height: 1.3">
+      <div class="card-body" style="color: black">
+        <h5 class="card-title">{{beauty.st_name}}</h5>
+        <p class="card-text">{{beauty.description}}</p>
+        <p class="card-text"><small class=""> <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>&nbsp{{beauty.street_name}} &#44 &nbsp {{beauty.place}}</small></p>
+        <p class="card-text">
+          <small class="">
+            <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+            </svg> &nbsp<b>{{beauty.phone}}</b>
+          </small>
+        </p>
+        <p class="card-text"><small class=""><b>Locality : </b>{{beauty.locality}}</small></p>
+        <p class="card-text"><small> <b>Opening Time : </b>{{beauty.opening}}</small></p>
+        <p class="card-text"><small><b>Closing Time :</b> {{beauty.closing}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr style="border-top: 3px solid black">
+
+{% endfor %}
+                
+
+</div>
+</div>
+                 
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+    <!-- footer starts here -->
+
+    <footer class="page-footer font-small  pt-4" style="background-color: #00bfb2;
+background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto"  style="color: #333333">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">why searchdisk</h5>
+        <p>Here you can get any type of information at one click with the easiest way, just select your location and catch whatever information you want .</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" >
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  
+  <!-- Social buttons -->
+
+  <ul class="list-unstyled list-inline text-center">
+    <h4 style="color: #333333">Connect with Us</h4>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-facebook"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-twitter"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-google"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-linkedin"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-youtube"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-instagram"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-pinterest"></a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: #333333"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+    <!-- footer ends here -->
+
+
+    
+
+</body>
+</html>

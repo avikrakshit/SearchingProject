@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html style="margin: 0px; width: 100%">
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+
+    <script src="static/country_state_city.json"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- <script src="static/js/jquery-1.9.0.js"> </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+   <!--  <script>window.jQuery || document.write('<script src="static/After_login.js">\x3C/script>')</script> -->
+
+    <!-- <script type="text/javascript" src="./jqueryCookies.js"></script> -->
+    <!-- <script type="text/javascript" src="static/After_login.js"></script> -->
+    
+
+    <!-- <script src="static/After_login.js"></script> -->
+     
+
+    
+
+
+<style>
+   
+          .carousel-item{
+    height: 400px;
+} 
+    .carousel-item img{
+    height: 400px;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+.zoom {
+  transition: transform 1.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
+
+.cardstyle {
+  color : black;
+  background-color: white
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: #b3b3b3;
+}
+
+.fa-facebook {
+  color: #333333;
+ }
+
+.fa-twitter {
+  color: #333333;
+ 
+}
+
+.fa-google {
+  color: #333333;
+ }
+
+.fa-linkedin {
+  color: #333333;
+  
+}
+
+.fa-youtube {
+  color:  #333333;
+}
+
+.fa-instagram {
+  color: #333333 ;
+  
+}
+
+.fa-pinterest {
+  color: #333333;
+}
+
+
+
+ 
+
+
+
+
+</style>
+
+
+
+
+<!-- <script>
+  $(document).ready(function)
+  $('#search-button').click(function(){
+    console.log("Clicked!")
+    var state = $('#state').val();
+    var district = $('#district').val();
+    var pincode = $('#pincode').val();
+    $.ajax({
+      url: 'result_all.html',
+      headers : {
+        'Authorization' : 'Bearer + {{token}}',
+      },
+      data: $('form').serialize(),
+      type: 'POST',
+      success: function(response){
+        console.log(response);
+      },
+      error: function(error){
+        console.log(error);
+      }
+    });
+  });
+</script>  -->
+</head>
+
+<body style="margin: 0px; background-color: white">
+
+
+
+
+    <!-- header starts here -->
+
+
+  <div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #e6f9ff; height: 350px" >
+        <div class="container space-2 space-0--lg mt-lg-8">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class=" mb-7 mb-lg-0">
+              <!-- Title -->
+              <span class="d-block  text-uppercase mb-2" style=" color: black">Join the change</span>
+              <h1 class="display-4 font-size-48--md-down mb-0" style="color: #0089b3">Search with Your Location and get the Information You want. </h1>
+              <!-- End Title -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- header ends here-->
+
+  
+
+
+ <br>
+ <br>
+
+
+<div class="container" style="width:250px;">
+<form id="form" method="POST" action="/result">
+  
+
+  <select name="state" id="state" class="form-control input-lg">
+    <option value="">Select State</option>
+    </select>
+    <br/>
+    <select name="district" id="district" class="form-control input-lg">
+    <option value="">Select District</option>
+    </select>
+    <br/>
+    <select name="pincode" id="pincode" class="form-control input-lg">
+    <option value="">Select Pincode</option>
+  </select>
+
+
+<br>
+
+  <p><button style="margin-left: 80px" id="search-button">Search</button></p>
+</form>
+
+
+</div>
+
+
+
+ <!-- footer starts here -->
+
+    <footer class="page-footer font-small  pt-4" style="background-color: #00bfb2;
+background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto"  style="color: #333333">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">why searchdisk</h5>
+        <p>Here you can get any type of information at one click with the easiest way, Just select your location and catch whatever information you want .</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" >
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: #333333">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  
+  <!-- Social buttons -->
+
+  <ul class="list-unstyled list-inline text-center">
+    <h4 style="color: #333333">Connect with Us</h4>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-facebook"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-twitter"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-google"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-linkedin"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-youtube"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-instagram"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-pinterest"></a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: #333333"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+    <!-- footer ends here -->
+
+
+  <script>
+$(document).ready(function(){
+
+ function load_json_data(id, parent_id)
+ {
+  
+  /*Load data into Country Dropdown*/
+  /*Using Map function*/
+    $("#state").empty().append(`<option disabled selected>Select State</option>`).append(`
+      ${geoArr.filter(g => g.parent_id==="0").map(state => { return `<option value="${state.id}">${state.name}</option>` })}
+    `)
+    $(document).on("change", "#state", () => {
+      let id = $("#state option:selected").val()    
+      $("#district").empty().append(`<option disabled selected>Select District</option>`).append(`
+        ${geoArr.filter(g => g.parent_id===id.toString()).map(district => { return `<option value="${district.id}">${district.name}</option>` })}
+      `)
+    })
+  $(document).on("change", "#district", () => {
+      let id = $("#district option:selected").val()   
+      $("#pincode").empty().append(`<option disabled selected>Select Pincode</option>`).append(`
+        ${geoArr.filter(g => g.parent_id===id.toString()).map(pincode => { return `<option value="${pincode.id}">${pincode.name}</option>` })}
+      `)
+    })
+ }
+
+ load_json_data('state');
+
+ /*$(document).on('change', '#country', function(){
+  var country_id = $(this).val();
+  if(country_id != '')
+  {
+   load_json_data('state', country_id);
+  }
+  else
+  {
+   $('#state').html('<option value="">Select state</option>');
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });
+ $(document).on('change', '#state', function(){
+  var state_id = $(this).val();
+  if(state_id != '')
+  {
+   load_json_data('city', state_id);
+  }
+  else
+  {
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });*/
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+

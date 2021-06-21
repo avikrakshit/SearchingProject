@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style type="text/css">
+    .carousel-item{
+    height: 400px;
+} 
+    .carousel-item img{
+    height: 400px;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+    </style>
+
+    <title>click places</title>
+  </head>
+
+  <body>
+    <form action="/beauty_data" method="POST">
+      
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1d1e0; color: white">
+  <a class="navbar-brand" href="#">SeaRchyBucket</a>
+ 
+
+  
+    <div class="float-right">
+          <a href="/login"><button type="button" class="btn btn-primary">Log Out</button></a>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" style="height: 250px">
+  <div class="ml-4 mr-5" >
+     <h1 class="" style="font-size: 100px;">Beauty</h1>
+    <p class="float-right" style="font-size: 23px;"></p>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+  <h1>You have selected the Location {{beauty.pincode}}</h1>
+  <br>
+  <br>
+  <br>
+<h3 style="text-align: center;">
+  Find the nearest Saloon, Beauty Parlour, Cosmetic Shop in your area.
+</h3>
+
+
+<table class="table table-hover  table-responsive" style="background-color: transparent;">
+    <thead style="color: #0000ff">
+      <tr>
+        
+        <th scope="col">Store ID</th>
+      <th scope="col">Type</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Street Name</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Place</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Opening</th>
+      <th scope="col">Closing</th>
+      <th scope="col">Picture</th>
+      <th scope="col">Category</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for beauty in beauty %}
+
+      <tr>
+      <td>{{beauty.st_id}}</td>
+      <td>{{beauty.typ}}</td>
+      <td>{{beauty.st_name}}</td>
+      <td>{{beauty.description}}</td>
+      <td>{{beauty.street_name}}</td>
+      <td>{{beauty.pincode}}</td>
+      <td>{{beauty.place}}</td>
+      <td>{{beauty.dist}}</td>
+      <td>{{beauty.state}}</td>
+      <td>{{beauty.phone}}</td>
+      <td>{{beauty.opening}}</td>
+      <td>{{beauty.closing}}</td>
+      <td>{{beauty.pic}}</td>
+      <td>{{beauty.category}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+<div class="row" style="margin-left: 100px; margin-right: 100px; margin-top: 50px ">
+      <div class="col-lg-4">
+        <img src="static/services_2.png" width="100" height="100">
+        <h2>Services</h2>
+        <p></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img src="static/money.png" width="100" height="100">
+        <h2>Less Expenditure</h2>
+        <p></p>
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <img src="static/search.png" width="100" height="100">
+        <h2>Easy Search</h2>
+        <p></p>
+        
+      </div><!-- /.col-lg-4 -->
+    </div>
+  </div>
+
+  </form>
+
+
+
+  
+  
+
+ 
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

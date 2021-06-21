@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serach Details</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Gotu' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Grandstander' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+
+  <style type="text/css">
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: #b3b3b3;
+}
+
+.fa-facebook {
+  color: #333333;
+ }
+
+.fa-twitter {
+  color: #333333;
+ 
+}
+
+.fa-google {
+  color: #333333;
+ }
+
+.fa-linkedin {
+  color: #333333;
+  
+}
+
+.fa-youtube {
+  color:  #333333;
+}
+
+.fa-instagram {
+  color: #333333 ;
+  
+}
+
+.fa-pinterest {
+  color: #333333;
+}
+
+.zoom {
+  transition: transform 1.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
+
+h3 {
+  font-family: 'Gotu';
+}
+
+p {
+
+  font-family: 'Grandstander';
+}
+
+.container-a {
+
+  margin-left: 100px;
+
+}
+
+.ksk-btn:hover {
+  background: seagreen;
+  color: white;
+  cursor: pointer;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 105px;
+  margin-right: 150px;
+  border-style: solid;
+  border-width: 1px;
+} 
+
+</style>
+</head>
+<body>
+<form action="/result" method="POST">
+
+    <!-- navbar starts here -->
+
+    <nav class="navbar navbar-expand-lg navbar-light" 
+    style="background-color: transparent; font-family: : 'Andika' ">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/about_us">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/contributer">Become a Contributor</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav nav-right" style="z-index: 99999999999999999999999999999999">
+      <li style="z-index: 999999999999999999999999999999999" class="nav-item">
+        <button style="z-index: 9999999999999999999999999999999999" class="btn btn-outline-warning" onclick="window.location.href='/logout'" type="button">Log Out</button>
+      </li>
+    </ul>
+    
+<!--       <span class="nav-item active">
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="float: right;">
+            
+        </div>
+      </span>
+ -->       
+  </div>
+
+  
+</nav>
+
+<!-- navbar ends here -->
+  
+ <!-- header Starts -->
+     
+  <div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #63a4ff;
+background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%); height: 350px; width: auto;" >
+
+
+         
+        <div class="space-2 space-0--lg mt-lg-8 container-a">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class="col-lg-5 mb-7 mb-lg-0">
+              <!-- Title -->
+              <span class="d-block  text-uppercase mb-2" style=" color: #002b80">Join the change</span>
+              <p style="color: #006666; font-family: 'Andika'; font-size: 32px">Search the nearest Saloon,  Parlour, Shop, Mall, Place, Service and many more at a Click away.</p>
+              <!-- End Title -->
+            </div>
+
+            <div class="col-lg-5 mb-7 mb-lg-0">
+              <!-- Title -->
+              <img src="/static/People search-bro.svg" style="height: 362px; margin-top: 83px">
+            
+              <!-- End Title -->
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+<!-- header Ends -->
+
+  
+
+  <br>
+  <br>
+  
+
+
+
+
+
+  <br>
+  <br>
+ 
+   
+
+
+
+
+
+<div class="container" style="text-align: center; margin-left: auto; margin-right: auto;">
+	
+	
+   <!-- 1st row-->
+  <div class="row card-pos">
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/beauty3.png"  style="height:250px ; width:260px;  background-color: " class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>BEAUTY</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/beauty_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/education2.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>EDUCATION</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/education_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/food5.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>FOOD</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/food_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+
+    
+
+
+</div>
+
+<!-- 2nd row-->
+<div class="row card-pos ">
+      
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/grocery.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>GROCERY</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/grocery_data?token={{header}}" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/hotel4.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>HOTEL</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/hotel_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/law3.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>LAW</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/law_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      
+      
+
+
+</div>
+
+     
+
+ <!-- 3rd row-->     
+<div class="row card-pos">
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/medical3.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>MEDICAL</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/medical_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/place3.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>PLACES</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/places_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/shopping4.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>SHOPPING</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/shopping_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+      
+ </div>
+
+
+
+<!-- 5th row-->
+<div class="row card-pos">
+      
+
+
+       <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="/static/services3.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>SERVICES</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/services_data" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+       <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/education2.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>UPCOMING</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+
+       <div class="col-sm-4 zoom">
+      <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 20rem;">
+      <img src="static/education2.png"  style="height:250px ; width:200px; margin-left: 45px" class="card-img-top"alt="No image is available ">
+      <div class="card-body">
+      <h3 class="card-title"><b>UPCOMING</b></h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary" style="margin-top: 15px">View Details</a>
+      </div>
+      </div>
+      </div>
+
+      
+
+  </div>
+
+</col-sm-6>
+</div>
+    
+      <hr>
+    <br>
+    <br>
+
+    <div class=" container card mb-3 border-0 text-center" style="font-family: Andika; padding-top: 10px; border-radius: 15px " >
+  <div class="row g-0">
+    <div class="col-md-4">
+        <h3 class="card-body" style="font-size: 25px">Become a Contributer.</h3>
+        <p class="card-body" style="font-size: 25px"></p>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body float-right">
+        <img src="static/developer2.svg" alt="No image is availble.">
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small  pt-4" style="background-color: #00bfb2;
+background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto"  style="color: #333333">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">why searchdisk</h5>
+        <p>Here you can get any type of information at one click with the easiest way, just select your location and catch whatever information you want .</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Coming Soon</h5>
+
+        <ul class="list-unstyled" >
+          <li>
+            <a href="#!">Upcoming</a>
+          </li>
+          <li>
+            <a href="#!">Upcoming</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto" style="color: #333333">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Coming Soon</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: #333333">Upcoming</a>
+          </li>
+          <li>
+            <a href="#!">Upcoming</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Coming Soon</h5>
+
+        <ul class="list-unstyled" style="color: #333333">
+          <li>
+            <a href="#!">Upcoming</a>
+          </li>
+          <li>
+            <a href="#!">Upcoming</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+
+  
+  <!-- Social buttons -->
+
+  <ul class="list-unstyled list-inline text-center">
+    <h4 style="color: #333333">Connect with Us</h4>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-facebook"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-twitter"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-google"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-linkedin"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-youtube"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-instagram"></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="fa fa-pinterest"></a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: #333333"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+</form>
+</body>
+</html>
